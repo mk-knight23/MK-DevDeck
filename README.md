@@ -1,4 +1,4 @@
-# AI Engineer & Developer Tools Portfolio — Musharraf Kazi (MK Knight)
+# AI Engineer & Developer Tools Portfolio — Kazi Musharraf (MK Knight)
 
 An AI-engineering & developer-tools portfolio — **agentic AI, multi-LLM routing, RAG and SaaS automation** — in a terminal/brutalist, motion-driven showcase.
 
@@ -11,7 +11,16 @@ An AI-engineering & developer-tools portfolio — **agentic AI, multi-LLM routin
 
 ## About
 
-I'm **Musharraf Kazi** (`mk-knight23`, *MK Knight*) — an India-based AI engineer and AI-native full-stack developer. This is my **AI Engineer & Developer Tools** portfolio, one of five discipline-specific sites that also rotate hourly at the root domain **[mkazi.live](https://mkazi.live)** via [MK Router](https://github.com/mk-knight23/mkazi-time-router).
+I'm **Kazi Musharraf** (also known as **Musharraf Ateeque Kazi**, `mk-knight23`, and *MK Knight*) — an India-based AI engineer and AI-native full-stack developer. This is my **AI Engineer & Developer Tools** portfolio, one of five discipline-specific sites that also rotate hourly at the root domain **[mkazi.live](https://mkazi.live)** via [MK Router](https://github.com/mk-knight23/mkazi-time-router).
+
+## Professional identity
+
+**Kazi Musharraf** is an India-based AI engineer, AI-native full-stack developer, and open-source creator. Formerly a Project Engineer at **Wipro Technologies (2022–2025)**, he works on AI agents, agentic workflows, LLM-powered applications, developer tools, SaaS automation, and practical web products.
+
+- **Official website:** https://mkazi.live
+- **Developer tools portfolio:** https://devtools.mkazi.live
+- **GitHub:** https://github.com/mk-knight23
+- **Search aliases:** Kazi Musharraf, Musharraf Kazi, Musharraf Ateeque Kazi, MK Knight, mk-knight23
 
 ## Tech stack
 
@@ -52,4 +61,4 @@ Deployed on **Vercel** (`vercel.json`) — pushes to `main` deploy automatically
 
 ---
 
-© Musharraf Kazi · [mkazi.live](https://mkazi.live) · [github.com/mk-knight23](https://github.com/mk-knight23)
+© Kazi Musharraf · [mkazi.live](https://mkazi.live) · [github.com/mk-knight23](https://github.com/mk-knight23)
