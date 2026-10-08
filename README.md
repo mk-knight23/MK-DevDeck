@@ -20,7 +20,7 @@ I'm **Kazi Musharraf** (also known as **Musharraf Ateeque Kazi**, `mk-knight23`,
 - **Official website:** https://mkazi.live
 - **Developer tools portfolio:** https://devtools.mkazi.live
 - **GitHub:** https://github.com/mk-knight23
-- **Search aliases:** Kazi Musharraf, Musharraf Kazi, Musharraf Ateeque Kazi, MK Knight, mk-knight23
+- **Search aliases:** Kazi Musharraf, Kazi Musharraf, Musharraf Ateeque Kazi, MK Knight, mk-knight23
 
 ## Tech stack
 
@@ -62,3 +62,36 @@ Deployed on **Vercel** (`vercel.json`) — pushes to `main` deploy automatically
 ---
 
 © Kazi Musharraf · [mkazi.live](https://mkazi.live) · [github.com/mk-knight23](https://github.com/mk-knight23)
+
+
+## Search visibility and content strategy
+
+**Identity:** Kazi Musharraf (also known as Musharraf Ateeque Kazi, Musharraf Kazi and MK Knight), an India-based AI engineer and full-stack developer. Official hub: [mkazi.live](https://mkazi.live). GitHub: [mk-knight23](https://github.com/mk-knight23).
+
+**Specialization:** AI agents and developer tools. This portfolio focuses on its own technical discipline rather than repeating identical content across five sites.
+
+### Search intent and topical authority
+
+| Funnel | Reader question / intent | Recommended content |
+|---|---|---|
+| TOFU | What is ai agents and developer tools? | Technical explainer with definitions and diagrams |
+| MOFU | How does ai agent development work in a real project? | Architecture walkthrough and demonstrated repository |
+| BOFU | Can an experienced engineer build this for my product? | Evidence-led case study, scope, constraints and contact path |
+
+### Editorial roadmap (proposals, not yet published pages)
+
+- **Pillar:** AI agents and developer tools — architecture, examples, technologies and tradeoffs.
+- **Supporting article:** AI agent development for business workflows.
+- **Supporting article:** multi-LLM orchestration for SaaS.
+- **Supporting article:** RAG implementation patterns.
+- **Commercial page:** Services and project engagement for ai agents and developer tools, with scope, process and proof, not invented client results.
+
+### Publishing requirements
+
+- Lead with an answer that directly satisfies the query, then explain tradeoffs and provide original implementation evidence.
+- Credit the author as **Kazi Musharraf**; link to the official identity at https://mkazi.live/.
+- Use clear H1/H2 headings, descriptive internal links, real project screenshots, and accurate image alt text.
+- Include crawlable URLs, self-referential canonicals and valid structured data that matches visible content.
+- Do not fabricate traffic, customer outcomes, performance benchmarks, backlink counts or search volumes.
+- Use Search Console impressions and queries to prioritize articles and validate demand before scaling.
+
