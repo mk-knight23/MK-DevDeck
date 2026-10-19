@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p dist && cp index.html style.css dist/ && cp -r public/* dist/"
+    "build": "mkdir -p dist && cp index.html style.css dist/ && cp -r public/* dist/",
+    "test": "node --test test/portfolio.test.cjs"
+  },
+  "homepage": "https://devtools.mkazi.live/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-knight23/MK-DevDeck.git"
   }
 }
