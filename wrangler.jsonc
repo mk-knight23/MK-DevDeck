@@ -1,0 +1,6 @@
+{
+  "name": "01-portfolio-devtools",
+  "compatibility_date": "2026-10-12",
+  "build": { "command": "npm run build" },
+  "assets": { "directory": "./dist" }
+}
