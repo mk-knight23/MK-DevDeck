@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p dist && cp index.html style.css dist/ && cp -r public/* dist/",
-    "test": "node --test test/portfolio.test.cjs"
+    "test": "node --test test/*.test.cjs"
   },
   "homepage": "https://devtools.mkazi.live/",
   "repository": {
