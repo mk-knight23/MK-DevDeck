@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Engineering Case Study: Stable Portfolio Routing | Kazi Musharraf</title>
+<meta name="description" content="A source-backed engineering case study on routing five portfolio sites through a stable primary homepage, including canonical URLs, crawlability and operational trade-offs.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://devtools.mkazi.live/blog/stable-portfolio-routing.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Engineering Case Study: Stable Portfolio Routing"><meta property="og:url" content="https://devtools.mkazi.live/blog/stable-portfolio-routing.html">
+<meta property="og:description" content="How a portfolio reverse proxy moved from scheduled homepage rotation to stable content for people and crawlers.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Engineering Case Study: Stable Portfolio Routing","description":"A source-backed engineering case study on portfolio routing, canonical URLs and crawlability.","author":{"@type":"Person","@id":"https://mkazi.live/#person","name":"Kazi Musharraf"},"mainEntityOfPage":"https://devtools.mkazi.live/blog/stable-portfolio-routing.html","inLanguage":"en","about":["reverse proxy","canonical URLs","search indexing","Cloudflare Workers","Vercel Middleware"]}</script>
+<style>body{margin:0;background:#0b1220;color:#e2e8f0;font:17px/1.75 system-ui,sans-serif}main{max-width:790px;margin:auto;padding:48px 22px 100px}a{color:#93c5fd}h1,h2{color:white;line-height:1.2}h1{font-size:clamp(2rem,5vw,3.3rem)}h2{margin-top:2.3rem}code{background:#1e293b;padding:2px 5px;border-radius:4px}li{margin:.5em 0}.eyebrow{color:#94a3b8}aside{border-left:4px solid #60a5fa;padding:12px 18px;background:#172338}footer{margin-top:60px;border-top:1px solid #334155;padding-top:24px}</style>
+</head>
+<body><main>
+<nav aria-label="Breadcrumb"><a href="/">DevTools portfolio</a> / Engineering notes</nav>
+<p class="eyebrow">Engineering case study · Architecture and technical SEO</p>
+<h1>Making a five-portfolio reverse proxy predictable for visitors and search engines</h1>
+<p>The <a href="https://github.com/mk-knight23/mkazi-time-router">mkazi-time-router source repository</a> contains two routing implementations: Vercel middleware and a Cloudflare Worker. Both can proxy requests to distinct portfolio origins. This case study describes repository changes, not an independently verified production rollout.</p>
+<h2>The problem</h2>
+<p>The router previously selected a different portfolio according to the hour in India Standard Time. Search crawler user agents were directed to a fixed portfolio instead. That made the homepage's identity harder to reason about and introduced a risk that crawlers and people would see materially different default content.</p>
+<h2>The design decision</h2>
+<p>The source was updated to select the DevTools portfolio as the default for both visitors and crawlers. Five specializations remain available at dedicated subdomains: <a href="https://devtools.mkazi.live/">developer tools</a>, <a href="https://fullstack.mkazi.live/">full-stack</a>, <a href="https://frontend.mkazi.live/">frontend</a>, <a href="https://backend.mkazi.live/">backend</a> and <a href="https://ai.mkazi.live/">AI interfaces</a>.</p>
+<p>Manual <code>?portfolio=N</code> variants are still supported for exploration and are marked <code>X-Robots-Tag: noindex, follow</code> in the router source. The primary homepage's canonical and Open Graph URL are rewritten to the apex domain when DevTools HTML is served there.</p>
+<h2>Discovery and identity</h2>
+<p>The router source provides <code>/robots.txt</code> and a conservative <code>/sitemap.xml</code> listing the primary homepage. Each portfolio repository retains its own sitemap, canonical metadata and structured data. The intent is to keep distinct specializations discoverable without treating every portfolio switch as a new indexable page.</p>
+<h2>Implementation trade-offs</h2>
+<ul><li><strong>Stable content:</strong> Predictable default HTML is easier to test, share and index than hourly rotation.</li><li><strong>Distinct origins:</strong> Each portfolio can retain its own design and technology stack, but duplicate content must be monitored.</li><li><strong>Proxy complexity:</strong> Canonical rewriting, headers, cookies and error fallback must behave consistently in both runtime implementations.</li><li><strong>Operational risk:</strong> GitHub commits are not evidence of a successful Cloudflare deployment.</li></ul>
+<h2>What remains unverified</h2>
+<aside>Production HTTP response checks, deployed build tests, Google Search Console revalidation and any indexing improvement remain pending. Search inclusion and AI citations cannot be guaranteed.</aside>
+<h2>Review the implementation</h2>
+<p>Inspect <a href="https://github.com/mk-knight23/mkazi-time-router/blob/main/middleware.ts">Vercel middleware</a>, <a href="https://github.com/mk-knight23/mkazi-time-router/blob/main/src/index.ts">Cloudflare Worker</a> and the <a href="https://github.com/mk-knight23/mkazi-time-router/blob/main/docs/SEO_AEO_ENGINEERING_AUDIT_2026-11-09.md">engineering audit</a>. This article documents design choices and limitations rather than inventing traffic or performance results.</p>
+<footer><a href="/">Back to portfolio</a> · <a href="https://github.com/mk-knight23">GitHub</a></footer>
+</main></body></html>
