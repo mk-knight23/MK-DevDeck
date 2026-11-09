@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "site": "https://devtools.mkazi.live/",
+  "repository": "https://github.com/mk-knight23/MK-DevDeck",
+  "scope": "Technologies evidenced by this repository's package.json, not a comprehensive personal skills assessment",
+  "runtimeDependencies": [],
+  "developmentDependencies": [],
+  "availableCommands": {
+    "build": "mkdir -p dist && cp index.html style.css dist/ && cp -r public/* dist/",
+    "test": "node --test test/*.test.cjs"
+  }
+}
